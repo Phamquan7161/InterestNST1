@@ -1,0 +1,41 @@
+<style>
+.tab {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-right: 10px;
+  background-color: #ddd;
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+}
+.tab.active {
+  background-color: #ccc;
+}
+.tab-content {
+  display: none;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: 0;
+}
+</style>
+<script>
+function toggleTabs() {
+  var tabContents = document.querySelectorAll(".tab-content");
+  for (var i = 0; i < tabContents.length; i++) {
+    var tabContent = tabContents[i];
+    if (tabContent.style.display === "none") {
+      tabContent.style.display = "block";
+    } else {
+      tabContent.style.display = "none";
+    }
+  }
+}
+</script>
+<div class="tab active" onclick="toggleTabs()">Toggle Tabs</div>
+<div class="tab-content">
+  <!-- Your list view web part for the first category of news goes here -->
+</div>
+<div class="tab-content">
+  <!-- Your list view web part for the second category of news goes here -->
+</div>
+...
